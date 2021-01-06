@@ -161,7 +161,7 @@ h3 {
 
 .container-about {
     text-align: center;
-    background-color: #424242;
+    background-color: #707070;
     padding: 3vh;
 }
 
@@ -206,7 +206,7 @@ h3 {
 
 /*UMIEJĘTNOŚCI*/
 .container-skills {
-    background-color: #222222;
+    background-color: #474747;
     padding: 3vh;
 }
 
@@ -407,6 +407,7 @@ h3 {
     margin: 2vh;
     background-color: white;
     padding: 1vh;
+    border: 1px solid #333;
 }
 
 .contact input {
