@@ -4,12 +4,21 @@ $(".a-about").on("click", function ()
             {scrollTop: $("#about").offset().top}, 500
         )
     })
+
+    $(".a-portfolio").on("click", function ()
+    {
+        $("body,html").animate(
+            {scrollTop: $("#projects").offset().top}, 500
+        )
+    })
+
     $(".a-skills").on("click", function ()
     {
         $("body,html").animate(
             {scrollTop: $("#skills").offset().top}, 500
         )
     })
+
     $(".a-contact").on("click", function ()
     {
         $("body,html").animate(
