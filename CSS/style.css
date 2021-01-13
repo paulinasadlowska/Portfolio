@@ -168,7 +168,7 @@ h3 {
 
 .container-about {
     text-align: center;
-    background-color: #707070;
+    background-color: #181A1B;
     padding: 3rem 2rem;
 }
 
@@ -292,6 +292,7 @@ h3 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
     width: 80vw;
     height: 60vw;
     background-repeat: no-repeat;
@@ -300,6 +301,7 @@ h3 {
     transition: 0.3s;
     border-radius: 20px;
     border: white solid 2px;
+    overflow: hidden;
 }
 
 .project1 {
@@ -322,10 +324,22 @@ h3 {
     font-weight: 700;
 }
 
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
 .projects-text {
     font-size: 2rem;
     color: white;
     text-align: center;
+
 }
 
 .projects-btn {
@@ -337,6 +351,13 @@ h3 {
     text-decoration: none;
     color: white;
     transition: 0.3s;
+}
+
+.project-title,
+.projects-text,
+.projects-btn {
+    position: relative;
+    z-index: 5;
 }
 
 @media(min-width:500px) {
@@ -368,6 +389,8 @@ h3 {
         font-size: 1.5rem;
         padding: 0.4rem;
     }
+
+
 }
 
 
@@ -399,7 +422,7 @@ h3 {
     .project1:hover,
     .project2:hover,
     .project3:hover {
-        opacity: 1;
+
         transform: scale(1.1);
     }
 
@@ -429,6 +452,22 @@ h3 {
 
     .project3:hover .projects-text {
         display: block;
+    }
+
+    .background {
+        opacity: 0;
+    }
+
+    .project1:hover .background {
+        opacity: 1;
+    }
+
+    .project2:hover .background {
+        opacity: 1;
+    }
+
+    .project3:hover .background {
+        opacity: 1;
     }
 }
 
@@ -465,6 +504,7 @@ h3 {
     background-color: black;
     text-transform: uppercase;
     color: white;
+    border: 1px solid white;
 }
 
 .contact .socials {
@@ -520,6 +560,11 @@ h3 {
 
     .contact button {
         height: 5rem;
+        transition: 0.3s;
+    }
+
+    .contact button:hover {
+        background-color: #222;
     }
 
     .contact .social {
